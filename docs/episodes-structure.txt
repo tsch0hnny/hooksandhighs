@@ -1,0 +1,22 @@
+<item>
+<title>Fuck Putin</title>
+<dc:creator>Yannick Owen</dc:creator>
+<pubDate>Tue, 01 Mar 2022 19:16:00 +0000</pubDate>
+<link>https://www.hooksandhighs.com/episodes/fuck-putin</link>
+<guid isPermaLink="false">6089c5845f3b505341ea2083:6260429e55dd3035bba638cb:6260455e7e655607bf02f88e</guid>
+<description>
+<![CDATA[ ]]>
+</description>
+<itunes:author>Hooks and Highs</itunes:author>
+<itunes:explicit>yes</itunes:explicit>
+<itunes:duration>01:47:57</itunes:duration>
+<itunes:image href="https://images.squarespace-cdn.com/content/v1/6089c5845f3b505341ea2083/1653423390380-OBWR7GYMRPWXPU0LMLK2/hooks-and-highs-logo-square.jpg?format=1500w"/>
+<itunes:season>1</itunes:season>
+<itunes:episode>1</itunes:episode>
+<itunes:title>Fuck Putin</itunes:title>
+<itunes:episodeType>full</itunes:episodeType>
+<enclosure url="https://static1.squarespace.com/static/6089c5845f3b505341ea2083/t/62604c7125bd7c642bf8d5cd/1650478421105/HOOKS+AND+HIGHS+-+FUCK+PUTIN.mp3" length="84932748" type="audio/mpeg"/>
+<media:content url="https://static1.squarespace.com/static/6089c5845f3b505341ea2083/t/62604c7125bd7c642bf8d5cd/1650478421105/HOOKS+AND+HIGHS+-+FUCK+PUTIN.mp3" length="84932748" type="audio/mpeg" isDefault="true" medium="audio">
+<media:title type="plain">Fuck Putin</media:title>
+</media:content>
+</item>
