@@ -22,7 +22,7 @@
     height: 70vh;
 }
 
-nav.links-internal a.active::after {
+/*nav.links-internal a.active::after {
     content: "";
     display: block;
     background-image: url("img/circle-1-dark.svg");
@@ -34,4 +34,26 @@ nav.links-internal a.active::after {
     top: -22px;
     background-position: center center;
     left: -17px;
+}*/
+
+/*nav.links-internal a:hover::after {
+    content: "";
+    display: block;
+    background-image: url(img/circle-3-dark.svg);
+    position: absolute;
+    min-width: 85px;
+    height: 69px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -22px;
+    background-position: center center;
+    left: -17px;
+}*/
+
+.purple-gradient {
+    background: hsla(296, 49%, 34%, 1);
+    background: linear-gradient(315deg, hsla(296, 49%, 34%, 1) 0%, hsla(298, 43%, 25%, 1) 12%, hsla(300, 51%, 16%, 1) 48%, hsla(0, 0%, 0%, 1) 100%);
+    background: -moz-linear-gradient(315deg, hsla(296, 49%, 34%, 1) 0%, hsla(298, 43%, 25%, 1) 12%, hsla(300, 51%, 16%, 1) 48%, hsla(0, 0%, 0%, 1) 100%);
+    background: -webkit-linear-gradient(315deg, hsla(296, 49%, 34%, 1) 0%, hsla(298, 43%, 25%, 1) 12%, hsla(300, 51%, 16%, 1) 48%, hsla(0, 0%, 0%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7B2C80", endColorstr="#5B255D", GradientType=1 );
 }
