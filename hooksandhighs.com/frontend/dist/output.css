@@ -1874,6 +1874,14 @@ video {
     margin-left: 1.5rem;
   }
 
+  .max-md\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .max-md\:mr-0 {
+    margin-right: 0px;
+  }
+
   .max-md\:hidden {
     display: none;
   }
