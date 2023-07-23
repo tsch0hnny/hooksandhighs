@@ -7,18 +7,18 @@
         <link href="output.css" rel="stylesheet">
     </head>
     <body class="bg-gradient-to-br from-black to-deeper-purple bg-no-repeat h-100 min-h-screen text-white">
-        <div class="nav-wrap container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky w-screen border-b border-barely-purple-dark">
-            <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center">
-                <a href="#" class="mr-6 max-md:ml-0"> 
+        <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark">
+            <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center font-extralight">
+                <a href="#" class="mr-6 max-md:ml-0 relative active"> 
                     Home
                 </a>
-                <a href="#" class="mr-6">
+                <a href="#about" class="mr-6 relative">
                     About
                 </a>
-                <a href="#" class="mr-6">
+                <a href="#playlist" class="mr-6 relative">
                     Playlist
                 </a>
-                <a href="#" class="mr-6 max-md:mr-0">
+                <a href="#contact" class="mr-6 max-md:mr-0 relative">
                     Contact
                 </a>
             </nav>
@@ -46,18 +46,18 @@
         <!-- END navigation  -->
 
         <!-- START CONTENT  -->
-        <div class="content-wrap mt-6 mx-6">
-            <div class="columns-2 max-sm:columns-1 max-sm:flex max-sm:flex-col">
-                <div class="break-after-column">
+        <div class="content-wrap mt-6 mx-6 flex flex-col min-h-70vh items-start sm:items-center gap-12">
+            <div class="section-recent flex flex-col min-h-84vh md:flex-row md:items-center">
+                <div class="break-after-column flex-1">
                     <img src="img/hooksandhighs-logo.gif" alt="">
                 </div>
-                <div class=""> 
-                    <h2 class="text-3xl">
-                        Most Recent Episodes
+                <div class="flex-1"> 
+                    <h2 class="text-3xl font-extralight">
+                        Latest Episode
                     </h2>
                     <div class="mt-6 sm:mt-10 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark">
                         <div
-                            class="bg-transparent border-barely-purple-dark transition-all duration-500 dark:bg-slate-800 transition-all duration-500 dark:border-barely-purple-dark border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+                            class="bg-transparent border-barely-purple-dark transition-all duration-500 dark:border-barely-purple-dark border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
                             <div class="flex items-center space-x-4">
                                 <img src="img/hooks-and-highs-logo-square.jpg" loading="lazy" decoding="async" alt="" class="flex-none rounded-lg bg-slate-100" width="88" height="88">
                                 <div class="min-w-0 flex-auto space-y-1 font-semibold">
@@ -70,6 +70,32 @@
                                         <p class="text-slate-900 transition-all duration-500 dark:text-slate-50 text-lg">
                                         Hooks and Highs - Fuck Putin
                                         </p>
+                                </div>
+                            </div>
+                            <div class="border-barely-purple-dark transition-all duration-500 bg-transparent dark:border-barely-purple-dark border-b space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+                                <div class="playlist flex flex-col">
+                                    <button
+                                        aria-current="true"
+                                        type="button"
+                                        class="outline-barely-purple-dark/[0.3] mt-px block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 outline outline-barely-purple-dark/[.0] hover:outline-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+
+                                        Fuck Putin
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="block mt-px w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 outline outline-barely-purple-dark/[.0] hover:outline-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                                        Fuck Ty Freeman
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="block mt-px w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 outline outline-barely-purple-dark/[.0] hover:outline-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                                        Who the fuck is Ty Freeman
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="block mt-px w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 outline outline-barely-purple-dark/[.0] hover:outline-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                                        What the fuck is interpolation
+                                    </button>
                                 </div>
                             </div>
                             <div class="space-y-2">
@@ -130,6 +156,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="flex section-about flex-col w-100 md:w-6/12 min-h-84vh">
+                <h2 class="text-3xl font-extralight mb-6">
+                    About us
+                </h2>
+                <p class="text-xl font-extralight mb-3">
+                    Hooks and Highs is about two men with white belt levels of expertise reaching black belt levels of shit-talking. All the while trying to make sense of the world, the music industry and mixed martial arts.
+                </p>
+                <p class="text-xl font-extralight">
+                    In the contemporary ocean of available podcasts one thing is direly missing – the voice of insanity. Who really talks for the confused, drunk and poorly educated? – I guess it’s us then.
+                </p>
             </div>
         </div>
         <!-- END CONTENT  -->
