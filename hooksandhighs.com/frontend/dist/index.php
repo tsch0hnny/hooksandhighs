@@ -106,7 +106,7 @@
                                     aria-description="' . htmlspecialchars($item['description']) . '"
                                     aria-file-url="' . htmlspecialchars($item['audio']['path']) . '"
                                     type="button"
-                                    class="border border-barely-purple-dark/[0.3] mt-px block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:border-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200">
+                                    class="border border-barely-purple-dark/[0.3] mt-px block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:border-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
                                         ' . htmlspecialchars($item['title']) . '
                                         </button>';
                             }
