@@ -1,0 +1,22 @@
+name: Deploy to server
+
+on:
+  push:
+    branches:
+      - main  # or change this to whatever your default branch is called
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: executing remote ssh commands to deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USERNAME }}
+        key: ${{ secrets.REMOTE_SSH_KEY }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        script: |
+          cd /home/qevorybi/public_html/hooksandhighs.com/
+          git pull
