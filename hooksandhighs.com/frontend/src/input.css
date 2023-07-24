@@ -77,3 +77,7 @@
     border-radius: 10px;
     border: 1px none #433743;
   }
+
+  .custom-full-height {
+    max-height: calc(100vh - 112px);
+  }

@@ -645,6 +645,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-0 {
+  margin-right: 0px;
+}
+
 .mr-6 {
   margin-right: 1.5rem;
 }
@@ -653,12 +657,20 @@ video {
   margin-right: auto;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
 
 .mt-px {
   margin-top: 1px;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .block {
@@ -1168,6 +1180,10 @@ video {
   background-color: #433743;
   border-radius: 10px;
   border: 1px none #433743;
+}
+
+.custom-full-height {
+  max-height: calc(100vh - 112px);
 }
 
 .hover\:border-barely-purple-dark:hover {
