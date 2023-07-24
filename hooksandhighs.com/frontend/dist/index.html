@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="output.css" rel="stylesheet">
     </head>
-    <body class="bg-gradient-to-br from-black to-deeper-purple bg-no-repeat h-100 min-h-screen text-white bg-fixed">
+    <body class="bg-gradient-to-br from-black to-deeper-purple bg-no-repeat h-100 min-h-screen text-white bg-fixed custom-scrollbar">
     <!--<body class="purple-gradient h-100 min-h-screen text-white background-fixed">-->
         <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark shadow-xl">
             <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center font-extralight">
@@ -50,7 +50,7 @@
         <div class="content-wrap mt-6 mx-6 flex flex-col min-h-70vh items-start sm:items-center gap-12">
             <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center">
                 <div class="break-after-column md:flex-1" id="animated-logo-wrap">
-                    <img src="img/hooksandhighs-logo.gif" id="animated-logo" alt="">
+                    <img src="img/hooksandhighs-logo.gif" id="animated-logo" class="w-full" alt="">
                 </div>
                 <div class="flex-1"> 
                     <h2 class="text-3xl font-extralight">
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="border-barely-purple-dark transition-all duration-500 bg-transparent dark:border-barely-purple-dark border-b space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
-                                <div class="playlist flex flex-col gap-4 mb-4 overflow-y-scroll h-56">
+                                <div class="playlist flex flex-col gap-4 mb-4 overflow-y-scroll h-56 custom-scrollbar pr-4">
                                     <button
                                         aria-current="true"
                                         type="button"
@@ -171,6 +171,20 @@
                     </p>
                 </div>
             </div>
+            <div class="flex section-about flex-col w-100 md:w-6/12 min-h-84vh justify-center">
+                <div class="border transition-shadow border-barely-purple-dark rounded-xl shadow-xl hover:shadow-md p-6">
+                    <h2 class="text-3xl font-extralight mb-4">
+                        Contact us
+                    </h2>
+                    <p class="text-xl font-extralight mb-3 leading-8">
+                        Get in touch for press, licensing or booking enquiries.
+                    </p>
+                    <p class="text-xl font-extralight leading-8">
+                    Email: <a href="mailto:high@hooksandhighs.com">high@hooksandhighs.com</a>
+                    </p>
+                </div>
+            </div>
+
         </div>
         <!-- END CONTENT  -->
 
@@ -186,13 +200,13 @@
 
                 if(logo) { // Check if the element exists
                     logo.addEventListener("click", function() {
-                        this.classList.toggle("md:w-72");
+                        this.classList.toggle("md:w-32");
                         logoWrap.classList.toggle("md:flex-1");
                     });
                 }
                 if(episodeCover) {
                     episodeCover.addEventListener("click", function() {
-                        player.classList.toggle("pointer-events-auto relative flex w-full flex-col rounded-md bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600 min-[0px]:h-full min-[0px]:rounded-none min-[0px]:border-0");
+                        player.classList.toggle("pointer-events-auto relative flex w-full flex-col rounded-md ");
                     });
                 }
             });

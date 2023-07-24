@@ -57,3 +57,23 @@
     background: -webkit-linear-gradient(315deg, hsla(296, 49%, 34%, 1) 0%, hsla(298, 43%, 25%, 1) 12%, hsla(300, 51%, 16%, 1) 48%, hsla(0, 0%, 0%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7B2C80", endColorstr="#5B255D", GradientType=1 );
 }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #433743;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #433743;
+    border-radius: 10px;
+    border: 1px none #433743;
+  }
