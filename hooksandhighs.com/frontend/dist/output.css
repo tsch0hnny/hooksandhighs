@@ -1158,7 +1158,7 @@ video {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #433743;
+  scrollbar-color: #564356;
 }
 
 /* Chrome, Edge, and Safari */
@@ -1172,9 +1172,9 @@ video {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #433743;
+  background-color: #564356;
   border-radius: 10px;
-  border: 1px none #433743;
+  border: 1px none #564356;
 }
 
 .custom-full-height {
