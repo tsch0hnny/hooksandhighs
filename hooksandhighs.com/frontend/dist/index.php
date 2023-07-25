@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
                                     <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">00:00</div>
-                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">69:42</div>
+                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">--:--:--</div>
                                 </div>
                             </div>
                             <audio controls class="hidden" id="audio">

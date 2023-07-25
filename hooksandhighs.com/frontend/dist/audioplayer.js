@@ -103,6 +103,12 @@ function formatTime(timeInSeconds) {
   return timeStr;
 }
 
+// Load metadata of the audio
+audio.addEventListener('loadedmetadata', () => {
+  // Display the duration when metadata is loaded
+  durTime.innerText = formatTime(audio.duration);
+});
+
 // Update progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
@@ -110,7 +116,11 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
   progressButton.style.left = `${progressPercent}%`;
   currTime.innerText = formatTime(currentTime);
-  durTime.innerText = formatTime(duration);
+
+  // Check if duration is a number before updating durTime
+  if (!isNaN(duration)) {
+    durTime.innerText = formatTime(duration);
+  }
 }
 
 // Set progress bar
