@@ -65,7 +65,7 @@
                                     <!-- <h2 class="text-slate-500 transition-all duration-500 dark:text-slate-400 text-sm leading-6 truncate">
                                         Fuck Putin
                                         </h2> --> 
-                                        <p class="text-slate-900 transition-all duration-500 dark:text-slate-50 text-lg">
+                                        <p class="episode-title text-slate-900 transition-all duration-500 dark:text-slate-50 text-lg">
                                         Hooks and Highs - Fuck Putin
                                         </p>
                                 </div>
@@ -111,12 +111,7 @@
                                         </button>';
                             }
                             ?>
-                    <button
-                    type="button"
-                    class="block mt-px w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 border border-barely-purple-dark/[.0] hover:border-barely-purple-dark/[1] hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
-                        What the fuck is interpolation
-                        </button>
-                        </div>
+                                </div>
                             </div>
                             <div class="space-y-2">
                                 <div class="relative">
@@ -132,8 +127,8 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
-                                    <div class="text-cyan-500 transition-all duration-500 dark:text-slate-100">24:16</div>
-                                    <div class="text-slate-500 transition-all duration-500 dark:text-slate-400">75:50</div>
+                                    <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">24:16</div>
+                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">75:50</div>
                                 </div>
                             </div>
                         </div>
