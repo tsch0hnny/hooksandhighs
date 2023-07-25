@@ -81,6 +81,8 @@ function loadEpisode(episode) {
   // Remove "border-barely-purple" from all buttons and add it back if aria-episode-index matches episodeIndex
   document.querySelectorAll('.playlist-item').forEach((item) => {
     item.classList.remove('border-barely-purple');
+    item.classList.add('border-barely-purple-dark/[0.3]');
+
     if (episodeIndex === Number(item.getAttribute('aria-episode-index'))) {
       item.classList.remove('border-barely-purple-dark/[0.3]');
       item.classList.add('border-barely-purple');
