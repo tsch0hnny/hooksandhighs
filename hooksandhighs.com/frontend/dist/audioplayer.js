@@ -25,7 +25,6 @@ fetch(episodes)
     .then( data => { console.log(data); } )
     .catch( err => { console.errror(err) } )
 
-console.log(res)
 // Keep track of song
 let episodeIndex = 2;
 
@@ -36,7 +35,7 @@ loadEpisode(episodes[episodeIndex]);
 function loadEpisode(episode) {
   title.innerText = episode.title;
   audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
-  cover.src = `images/${song}.jpg`;
+  cover.src = `images/${episode.title}.jpg`;
 }
 
 // Play song
