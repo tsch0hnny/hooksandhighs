@@ -37,6 +37,24 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
 // Keep track of song
 let episodeIndex = 2;
 
+// Wait for the DOM content to load
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all buttons with class "playlist-item"
+    const playlistItems = document.querySelectorAll('.playlist-item');
+
+    // Add click event listener to each button
+    playlistItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Get the aria-episode-index attribute of the clicked button
+            episodeIndex = Number(item.getAttribute('aria-episode-index'));
+
+            // Load and play the corresponding episode
+            loadEpisode(episodes[episodeIndex]);
+            playAudio();
+        });
+    });
+});
+
 // Update song details
 function loadEpisode(episode) {
   title.innerText = episode.title;
