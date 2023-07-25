@@ -889,6 +889,11 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-barely-purple {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 67 86 / var(--tw-border-opacity));
+}
+
 .border-barely-purple-dark {
   --tw-border-opacity: 1;
   border-color: rgb(67 55 67 / var(--tw-border-opacity));
@@ -1066,11 +1071,6 @@ video {
   --tw-ring-color: rgb(210 198 210 / var(--tw-ring-opacity));
 }
 
-.drop-shadow-xl {
-  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .backdrop-blur-md {
   --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1179,6 +1179,13 @@ video {
 
 .custom-full-height {
   max-height: calc(100vh - 112px);
+}
+
+.background-gradient-dark-to-purple {
+  background: rgba(44,16,46,1);
+  background: linear-gradient(130deg, rgba(23,22,20,1) 0%, rgba(44,16,46,1) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .hover\:border-barely-purple-dark:hover {

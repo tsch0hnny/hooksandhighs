@@ -10,8 +10,8 @@
     <!--<body class="purple-gradient h-100 min-h-screen text-white background-fixed">-->
         <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark shadow-xl">
             <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center font-extralight">
-                <a href="#playlist" class="mr-6 relative">
-                    Playlist
+                <a href="#episodes" class="mr-6 relative">
+                    Episodes
                 </a>
                 <a href="#about" class="mr-6 max-md:ml-0 relative">
                     About
@@ -45,22 +45,22 @@
 
         <!-- START CONTENT  -->
         <div class="content-wrap ml-6 flex flex-col min-h-70vh items-start sm:items-center gap-72 custom-scrollbar overflow-y-scroll custom-full-height pr-4 mr-0 mt-0">
-            <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center" id="playlist">
+            <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center" id="episodes">
                 <div class="break-after-column md:flex-1" id="animated-logo-wrap">
                     <img src="img/hooksandhighs-logo.gif" id="animated-logo" class="w-full" alt="">
                 </div>
                 <div class="flex-1"> 
                     <h2 class="text-3xl font-extralight">
-                        Playlist
+                        Episodes
                     </h2>
-                    <div class="mt-6 sm:mt-10 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark" id="player">
+                    <div class="mt-6 sm:mt-6 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark" id="player">
                         <div
                             class="bg-transparent border-barely-purple-dark transition-all duration-500 dark:border-barely-purple-dark border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
                             <div class="flex items-center space-x-4">
                                 <img src="img/hooks-and-highs-logo-square.jpg" loading="lazy" decoding="async" alt="" id="episode-cover" class="flex-none rounded-lg bg-slate-100" width="88" height="88">
                                 <div class="min-w-0 flex-auto space-y-1 font-semibold">
                                     <p class="text-cyan-500 transition-all duration-500 dark:text-cyan-400 text-sm leading-6">
-                                    Episode 1
+                                    Episode <span id="episode-number">1</span>
                                     </p>
                                     <!-- <h2 class="text-slate-500 transition-all duration-500 dark:text-slate-400 text-sm leading-6 truncate">
                                         Fuck Putin
@@ -96,41 +96,51 @@
                             // Convert the response into an array
                             $data = json_decode($response, true);
 
+                            // Initialize the counter
+                            $episodeIndex = 0;
+
                             // Loop through the data to generate the HTML
                             foreach($data as $item){
                                 echo '<button
-                                    aria-current="true"
+                                    aria-episode-index="' . $episodeIndex . '"
+                                    aria-current="false"
                                     aria-release-datetime="' . htmlspecialchars($item['releasedate']) . '"
                                     aria-id="' . htmlspecialchars($item['_id']) . '"
                                     aria-duration=""  // This value is missing from the provided data
                                     aria-description="' . htmlspecialchars($item['description']) . '"
                                     aria-file-url="' . htmlspecialchars($item['audio']['path']) . '"
                                     type="button"
-                                    class="border border-barely-purple-dark/[0.3] mt-px block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:border-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                                    class="playlist-item border border-barely-purple-dark/[0.3] mt-px block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:border-barely-purple-dark hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
                                         ' . htmlspecialchars($item['title']) . '
                                         </button>';
+                                    // Increment the counter for the next iteration
+                                    $episodeIndex++;
                             }
                             ?>
                                 </div>
                             </div>
                             <div class="space-y-2">
                                 <div class="relative">
-                                    <div class="bg-barely-purple transition-all duration-500 dark:bg-slate-700 rounded-full overflow-hidden">
-                                        <div class="bg-white transition-all duration-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar"
+                                    <div class="progressbar-wrap bg-barely-purple transition-all duration-500 dark:bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="progressbar bg-white transition-all duration-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar"
                                             aria-label="music progress" aria-valuenow="1456" aria-valuemin="0" aria-valuemax="4550"></div>
                                     </div>
                                     <div
-                                        class="ring-barely-purple-light transition-all duration-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
+                                        class="progressbar-button ring-barely-purple-light transition-all duration-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
                                         <div
                                             class="w-1.5 h-1.5 bg-cyan-500 transition-all duration-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-barely-purple-light">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
-                                    <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">24:16</div>
-                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">75:50</div>
+                                    <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">00:00</div>
+                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">--:--:--</div>
                                 </div>
                             </div>
+                            <audio controls class="hidden" id="audio">
+                                <source src="" type="audio/mpeg">
+                                    Your browser does not support the audio tag.
+                            </audio>
                         </div>
                         <div
                             class="bg-slate-50 text-slate-500 transition-all duration-500 dark:bg-slate-600 transition-all duration-500 dark:text-slate-200 rounded-b-xl flex items-center">
@@ -149,10 +159,14 @@
                                 </button>
                             </div>
                             <button type="button" class="bg-barely-purple-dark text-slate-900 transition-all duration-500 dark:bg-slate-100 transition-all duration-500 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-barely-purple shadow-md flex items-center justify-center" aria-label="Pause">
-                                <svg width="30" height="32" fill="currentColor">
+                                <svg width="30" height="32" fill="currentColor" class="play-button-icon-pause hidden">
                                     <rect x="6" y="4" width="4" height="24" rx="2"></rect>
                                     <rect x="20" y="4" width="4" height="24" rx="2"></rect>
                                 </svg>
+                                <svg width="35" height="35" fill="currentColor" class="play-button-icon-play" style="margin-left:5px;" viewBox="0 0 16 16">
+                                    <path d="M2 2 14 8 2 14Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+
                             </button>
                             <div class="flex-auto flex items-center justify-evenly">
                                 <button type="button" aria-label="Skip 10 seconds" class="">
@@ -225,5 +239,6 @@
                 }
             });
         </script>
+        <script src='audioplayer.js'></script>
     </body>
 </html>
