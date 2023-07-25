@@ -179,6 +179,15 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 
+// Rewind 10 seconds
+rewindBtn.addEventListener('click', () => {
+  audio.currentTime = Math.max(audio.currentTime - 10, 0);
+});
+
+// Skip 10 seconds
+skipBtn.addEventListener('click', () => {
+  audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+});
 
 // Event listeners
 playBtn.addEventListener('click', () => {
