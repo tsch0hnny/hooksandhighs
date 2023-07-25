@@ -33,9 +33,6 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
 // Keep track of song
 let episodeIndex = 2;
 
-// Initially load song details into DOM
-loadEpisode(episodes[episodeIndex]);
-
 // Update song details
 function loadEpisode(episode) {
   title.innerText = episode.title;
