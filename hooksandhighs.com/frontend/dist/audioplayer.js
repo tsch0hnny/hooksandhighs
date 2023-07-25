@@ -3,7 +3,7 @@ const playBtn = document.querySelector('[aria-label="Pause"]');
 const prevBtn = document.querySelector('[aria-label="Previous"]');
 const nextBtn = document.querySelector('[aria-label="Next"]');
 const rewindBtn = document.querySelector('[aria-label="Rewind 10 seconds"]');
-const skipBtn = document.querySelector('[aria-label="Skip 10 seconds]');
+const skipBtn = document.querySelector('[aria-label="Skip 10 seconds"]');
 
 const audio = document.getElementById('audio');
 const progress = document.querySelector('.progressbar');
