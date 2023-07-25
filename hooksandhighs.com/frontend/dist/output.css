@@ -889,6 +889,11 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-barely-purple {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 67 86 / var(--tw-border-opacity));
+}
+
 .border-barely-purple-dark {
   --tw-border-opacity: 1;
   border-color: rgb(67 55 67 / var(--tw-border-opacity));
@@ -1064,11 +1069,6 @@ video {
 .ring-barely-purple-light {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(210 198 210 / var(--tw-ring-opacity));
-}
-
-.drop-shadow-xl {
-  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-md {
