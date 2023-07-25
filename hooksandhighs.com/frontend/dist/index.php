@@ -120,15 +120,15 @@
                                             aria-label="music progress" aria-valuenow="1456" aria-valuemin="0" aria-valuemax="4550"></div>
                                     </div>
                                     <div
-                                        class="ring-barely-purple-light transition-all duration-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
+                                        class="progressbar-button ring-barely-purple-light transition-all duration-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
                                         <div
                                             class="w-1.5 h-1.5 bg-cyan-500 transition-all duration-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-barely-purple-light">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between text-sm leading-6 font-medium tabular-nums">
-                                    <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">24:16</div>
-                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">75:50</div>
+                                    <div class="episode-current-time text-cyan-500 transition-all duration-500 dark:text-slate-100">00:00</div>
+                                    <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">69:42</div>
                                 </div>
                             </div>
                             <audio controls class="hidden" id="audio">

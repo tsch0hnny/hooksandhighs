@@ -2,10 +2,13 @@ const audioContainer = document.getElementById('player');
 const playBtn = document.querySelector('[aria-label="Pause"]');
 const prevBtn = document.querySelector('[aria-label="Previous"]');
 const nextBtn = document.querySelector('[aria-label="Next"]');
+const rewindBtn = document.querySelector('[aria-label="Rewind 10 seconds"]');
+const skipBtn = document.querySelector('[aria-label="Skip 10 seconds]');
 
 const audio = document.getElementById('audio');
 const progress = document.querySelector('.progressbar');
 const progressContainer = document.querySelector('.progressbar-wrap');
+const progressButton = document.querySelector('.progressbar-button');
 const title = document.querySelector('.episode-title');
 const cover = document.getElementById('episode-cover');
 const currTime = document.querySelector('.episode-current-time');
@@ -87,6 +90,8 @@ function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+    progressButton.style.left = `${progressPercent}%`;
+
     // Update duration time here...
 }
 
