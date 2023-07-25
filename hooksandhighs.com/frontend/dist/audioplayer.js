@@ -4,8 +4,8 @@ const prevBtn = document.querySelector('[aria-label="Previous"]');
 const nextBtn = document.querySelector('[aria-label="Next"]');
 
 const audio = document.getElementById('audio');
-const progress = document.querySelector('progressbar');
-const progressContainer = document.querySelector('progressbar-wrap');
+const progress = document.querySelector('.progressbar');
+const progressContainer = document.querySelector('.progressbar-wrap');
 const title = document.querySelector('.episode-title');
 const cover = document.getElementById('episode-cover');
 const currTime = document.querySelector('.episode-current-time');
@@ -18,12 +18,17 @@ const songs = [
     'Polo G – I Know'
 ];
 
-const episodes = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
+const url = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
 
-fetch(episodes)
-    .then( res => { return res.json(); } )
-    .then( data => { console.log(data); } )
-    .catch( err => { console.errror(err) } )
+let episodes;
+
+fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D')
+  .then(res => res.json())
+  .then(data => {
+    episodes = data; // save the data to use later
+    loadEpisode(episodes[episodeIndex]); // load the initial episode
+  })
+  .catch(err => console.error(err));
 
 // Keep track of song
 let episodeIndex = 2;
@@ -58,14 +63,13 @@ function pauseAudio() {
 
 // Previous song
 function prevEpisode() {
-  songIndex--;
+  episodeIndex--;
 
-  if (songIndex < 0) {
-    songIndex = songs.length - 1;
+  if (episodeIndex < 0) {
+    episodeIndex = episodes.length - 1;
   }
 
   loadEpisode(episodes[episodeIndex]);
-
   playAudio();
 }
 
@@ -73,12 +77,11 @@ function prevEpisode() {
 function nextEpisode() {
   episodeIndex++;
 
-  if (episodeIndex > episode.length - 1) {
+  if (episodeIndex > episodes.length - 1) {
     episodeIndex = 0;
   }
 
   loadEpisode(episodes[episodeIndex]);
-
   playAudio();
 }
 
@@ -87,6 +90,7 @@ function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+    // Update duration time here...
 }
 
 // Set progress bar
