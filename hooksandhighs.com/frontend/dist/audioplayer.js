@@ -42,7 +42,8 @@ function loadEpisode(episode) {
   title.innerText = episode.title;
   episodeNumber.innerText = episodeIndex + 1;
   audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
-  cover.src = `images/${episode.title}.jpg`;
+  //cover.src = `images/${episode.title}.jpg`;
+  
 }
 
 // Play song
