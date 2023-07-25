@@ -1,3 +1,5 @@
+// from https://github.com/Nomzy-kush/Music-Player-with-JS/tree/main
+
 const audioContainer = document.getElementById('player');
 const playBtn = document.querySelector('[aria-label="Pause"]');
 const prevBtn = document.querySelector('[aria-label="Previous"]');
