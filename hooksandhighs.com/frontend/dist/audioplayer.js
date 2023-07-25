@@ -4,8 +4,8 @@ const prevBtn = document.querySelector('[aria-label="Previous"]');
 const nextBtn = document.querySelector('[aria-label="Next"]');
 
 const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
+const progress = document.querySelector('progressbar');
+const progressContainer = document.querySelector('progressbar-wrap');
 const title = document.querySelector('.episode-title');
 const cover = document.getElementById('episode-cover');
 const currTime = document.querySelector('.episode-current-time');
@@ -18,13 +18,15 @@ const songs = [
     'Polo G – I Know'
 ];
 
-const url = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes'
+const url = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
 
 fetch(url)
     .then( res => { return res.json(); } )
     .then( data => { console.log(data); } )
     .catch( err => { console.errror(err) } )
 
+console.log(url)
+console.log(res)
 // Keep track of song
 let songIndex = 2;
 
@@ -34,7 +36,7 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
   title.innerText = song;
-  audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads//2023/07/20/${song}.mp3`;
+  audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
 }
 

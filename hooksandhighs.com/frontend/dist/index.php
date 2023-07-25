@@ -115,8 +115,8 @@
                             </div>
                             <div class="space-y-2">
                                 <div class="relative">
-                                    <div class="bg-barely-purple transition-all duration-500 dark:bg-slate-700 rounded-full overflow-hidden">
-                                        <div class="bg-white transition-all duration-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar"
+                                    <div class="progressbar-wrap bg-barely-purple transition-all duration-500 dark:bg-slate-700 rounded-full overflow-hidden">
+                                        <div class="progressbar bg-white transition-all duration-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar"
                                             aria-label="music progress" aria-valuenow="1456" aria-valuemin="0" aria-valuemax="4550"></div>
                                     </div>
                                     <div
@@ -131,6 +131,10 @@
                                     <div class="episode-duration text-slate-500 transition-all duration-500 dark:text-slate-400">75:50</div>
                                 </div>
                             </div>
+                            <audio controls class="hidden" id="audio">
+                                <source src="" type="audio/mpeg">
+                                    Your browser does not support the audio tag.
+                            </audio>
                         </div>
                         <div
                             class="bg-slate-50 text-slate-500 transition-all duration-500 dark:bg-slate-600 transition-all duration-500 dark:text-slate-200 rounded-b-xl flex items-center">
@@ -225,5 +229,6 @@
                 }
             });
         </script>
+        <script src='audioplayer.js'></script>
     </body>
 </html>
