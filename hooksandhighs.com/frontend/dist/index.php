@@ -164,7 +164,7 @@
                                     <rect x="20" y="4" width="4" height="24" rx="2"></rect>
                                 </svg>
                                 <svg width="30" height="32" fill="currentColor" class="play-button-icon-play">
-                                    <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M2 2 28 16 2 30Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </button>
                             <div class="flex-auto flex items-center justify-evenly">
