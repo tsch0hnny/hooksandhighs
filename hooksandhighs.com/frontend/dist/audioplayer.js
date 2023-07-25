@@ -85,15 +85,32 @@ function nextEpisode() {
   playAudio();
 }
 
+// Converts time in seconds to HH:MM:SS format
+function formatTime(timeInSeconds) {
+  const hours = Math.floor(timeInSeconds / 3600);
+  const minutes = Math.floor((timeInSeconds - (hours * 3600)) / 60);
+  const seconds = Math.floor(timeInSeconds - (hours * 3600) - (minutes * 60));
+
+  let timeStr = '';
+
+  if(hours > 0) {
+    timeStr += (hours < 10 ? '0' : '') + hours + ':';
+  }
+
+  timeStr += (minutes < 10 ? '0' : '') + minutes + ':' +
+             (seconds < 10 ? '0' : '') + seconds;
+
+  return timeStr;
+}
+
 // Update progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
-    progressButton.style.left = `${progressPercent}%`;
-    currTime.innerText = currentTime;
-    durTime.innerText = duration;
-    // Update duration time here...
+  progressButton.style.left = `${progressPercent}%`;
+  currTime.innerText = formatTime(currentTime);
+  durTime.innerText = formatTime(duration);
 }
 
 // Set progress bar
