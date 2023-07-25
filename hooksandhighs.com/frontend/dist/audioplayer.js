@@ -31,14 +31,6 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
   .then(data => {
     episodes = data; // save the data to use later
     loadEpisode(episodes[episodeIndex]); // load the initial episode
-  })
-  .catch(err => console.error(err));
-
-// Keep track of song
-let episodeIndex = 2;
-
-// Wait for the DOM content to load
-document.addEventListener('DOMContentLoaded', () => {
     // Get all buttons with class "playlist-item"
     const playlistItems = document.querySelectorAll('.playlist-item');
 
@@ -53,7 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
             playAudio();
         });
     });
-});
+  })
+  .catch(err => console.error(err));
+
+// Keep track of song
+let episodeIndex = 2;
 
 // Update song details
 function loadEpisode(episode) {
