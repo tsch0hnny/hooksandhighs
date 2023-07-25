@@ -163,7 +163,7 @@
                                     <rect x="6" y="4" width="4" height="24" rx="2"></rect>
                                     <rect x="20" y="4" width="4" height="24" rx="2"></rect>
                                 </svg>
-                                <svg width="35" height="35" fill="currentColor" class="play-button-icon-play ml-1" viewBox="0 0 16 16">
+                                <svg width="35" height="35" fill="currentColor" class="play-button-icon-play" style="margin-left:5px;" viewBox="0 0 16 16">
                                     <path d="M2 2 14 8 2 14Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
 
