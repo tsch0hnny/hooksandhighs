@@ -50,7 +50,7 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
   .catch(err => console.error(err));
 
 // Keep track of song
-let episodeIndex = 2;
+let episodeIndex = episodes.length - 1;
 
 // Wait for the DOM content to load
 document.addEventListener('DOMContentLoaded', () => {
