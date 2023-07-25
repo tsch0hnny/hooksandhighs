@@ -159,9 +159,12 @@
                                 </button>
                             </div>
                             <button type="button" class="bg-barely-purple-dark text-slate-900 transition-all duration-500 dark:bg-slate-100 transition-all duration-500 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-barely-purple shadow-md flex items-center justify-center" aria-label="Pause">
-                                <svg width="30" height="32" fill="currentColor">
+                                <svg width="30" height="32" fill="currentColor" class="play-button-icon-pause hidden">
                                     <rect x="6" y="4" width="4" height="24" rx="2"></rect>
                                     <rect x="20" y="4" width="4" height="24" rx="2"></rect>
+                                </svg>
+                                <svg width="30" height="32" fill="currentColor" class="play-button-icon-play">
+                                    <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </button>
                             <div class="flex-auto flex items-center justify-evenly">
