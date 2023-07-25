@@ -18,30 +18,29 @@ const songs = [
     'Polo G – I Know'
 ];
 
-const url = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
+const episodes = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
 
-fetch(url)
+fetch(episodes)
     .then( res => { return res.json(); } )
     .then( data => { console.log(data); } )
     .catch( err => { console.errror(err) } )
 
-console.log(url)
 console.log(res)
 // Keep track of song
-let songIndex = 2;
+let episodeIndex = 2;
 
 // Initially load song details into DOM
-loadSong(songs[songIndex]);
+loadEpisode(episodes[episodeIndex]);
 
 // Update song details
-function loadSong(song) {
-  title.innerText = song;
-  audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${song}.mp3`;
+function loadEpisode(episode) {
+  title.innerText = episode.title;
+  audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
   cover.src = `images/${song}.jpg`;
 }
 
 // Play song
-function playSong() {
+function playAudio() {
   audioContainer.classList.add('play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-play');
 //  playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -50,7 +49,7 @@ function playSong() {
 }
 
 // Pause song
-function pauseSong() {
+function pauseAudio() {
   audioContainer.classList.remove('play');
 //  playBtn.querySelector('i.fas').classList.add('fa-play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-pause');
@@ -59,29 +58,29 @@ function pauseSong() {
 }
 
 // Previous song
-function prevSong() {
+function prevEpisode() {
   songIndex--;
 
   if (songIndex < 0) {
     songIndex = songs.length - 1;
   }
 
-  loadSong(songs[songIndex]);
+  loadEpisode(episodes[episodeIndex]);
 
-  playSong();
+  playAudio();
 }
 
 // Next song
-function nextSong() {
-  songIndex++;
+function nextEpisode() {
+  episodeIndex++;
 
-  if (songIndex > songs.length - 1) {
-    songIndex = 0;
+  if (episodeIndex > episode.length - 1) {
+    episodeIndex = 0;
   }
 
-  loadSong(songs[songIndex]);
+  loadEpisode(episodes[episodeIndex]);
 
-  playSong();
+  playAudio();
 }
 
 // Update progress bar
@@ -106,15 +105,15 @@ playBtn.addEventListener('click', () => {
   const isPlaying = audioContainer.classList.contains('play');
 
   if (isPlaying) {
-    pauseSong();
+    pauseAudio();
   } else {
-    playSong();
+    playAudio();
   }
 });
 
 // Change song
-prevBtn.addEventListener('click', prevSong);
-nextBtn.addEventListener('click', nextSong);
+prevBtn.addEventListener('click', prevEpisode);
+nextBtn.addEventListener('click', nextEpisode);
 
 // Time/song update
 audio.addEventListener('timeupdate', updateProgress);
@@ -123,7 +122,7 @@ audio.addEventListener('timeupdate', updateProgress);
 progressContainer.addEventListener('click', setProgress);
 
 // Song ends
-audio.addEventListener('ended', nextSong);
+audio.addEventListener('ended', nextEpisode);
 
 // Time of song
 audio.addEventListener('timeupdate',DurTime);
