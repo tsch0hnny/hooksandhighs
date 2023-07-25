@@ -15,6 +15,8 @@ const episodeNumber = document.getElementById('episode-number');
 const currTime = document.querySelector('.episode-current-time');
 const durTime = document.querySelector('.episode-duration');
 
+const playlist = document.querySelector('.playlist');
+
 // Song titles
 const songs = [
     'Juice WRLD Ft Benny Blanco - Real Shit',
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playAudio();
         });
     });
+    playlist.scrollTo(0, nestedElement.scrollHeight);
 });
 
 // Update song details
