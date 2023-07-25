@@ -60,7 +60,7 @@
                                 <img src="img/hooks-and-highs-logo-square.jpg" loading="lazy" decoding="async" alt="" id="episode-cover" class="flex-none rounded-lg bg-slate-100" width="88" height="88">
                                 <div class="min-w-0 flex-auto space-y-1 font-semibold">
                                     <p class="text-cyan-500 transition-all duration-500 dark:text-cyan-400 text-sm leading-6">
-                                    Episode 1
+                                    Episode <span id="episode-number">1</span>
                                     </p>
                                     <!-- <h2 class="text-slate-500 transition-all duration-500 dark:text-slate-400 text-sm leading-6 truncate">
                                         Fuck Putin

@@ -11,6 +11,7 @@ const progressContainer = document.querySelector('.progressbar-wrap');
 const progressButton = document.querySelector('.progressbar-button');
 const title = document.querySelector('.episode-title');
 const cover = document.getElementById('episode-cover');
+const episodeNumber = document.getElementById('episode-number');
 const currTime = document.querySelector('.episode-current-time');
 const durTime = document.querySelector('.episode-duration');
 
@@ -39,6 +40,7 @@ let episodeIndex = 2;
 // Update song details
 function loadEpisode(episode) {
   title.innerText = episode.title;
+  episodeNumber.innerText = episodeIndex + 1;
   audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
   cover.src = `images/${episode.title}.jpg`;
 }
