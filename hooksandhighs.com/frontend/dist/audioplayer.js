@@ -76,7 +76,15 @@ function loadEpisode(episode) {
   episodeNumber.innerText = episodeIndex + 1;
   audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
   //cover.src = `images/${episode.title}.jpg`;
-  
+
+
+  // Remove "border-barely-purple" from all buttons and add it back if aria-episode-index matches episodeIndex
+  document.querySelectorAll('.playlist-item').forEach((item) => {
+    item.classList.remove('border-barely-purple');
+    if (episodeIndex === Number(item.getAttribute('aria-episode-index'))) {
+      item.classList.add('border-barely-purple');
+    }
+  }); 
 }
 
 // Play song
