@@ -104,8 +104,8 @@ function loadEpisode(episode) {
 function playAudio() {
   audioContainer.classList.add('play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtnIcon.classList.remove('hidden');
-    pauseBtnIcon.classList.add('hidden');
+    playBtnIcon.classList.add('hidden');
+    pauseBtnIcon.classList.remove('hidden');
 //  playBtn.querySelector('i.fas').classList.add('fa-pause');
 
   audio.play();
@@ -114,8 +114,8 @@ function playAudio() {
 // Pause song
 function pauseAudio() {
   audioContainer.classList.remove('play');
-  playBtnIcon.classList.add('hidden');
-  pauseBtnIcon.classList.remove('hidden');
+  playBtnIcon.classList.remove('hidden');
+  pauseBtnIcon.classList.add('hidden');
 
 //  playBtn.querySelector('i.fas').classList.add('fa-play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-pause');
