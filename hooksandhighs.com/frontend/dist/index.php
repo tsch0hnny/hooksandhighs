@@ -53,7 +53,7 @@
                     <h2 class="text-3xl font-extralight">
                         Episodes
                     </h2>
-                    <div class="mt-4 sm:mt-10 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark" id="player">
+                    <div class="mt-6 sm:mt-6 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark" id="player">
                         <div
                             class="bg-transparent border-barely-purple-dark transition-all duration-500 dark:border-barely-purple-dark border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
                             <div class="flex items-center space-x-4">
