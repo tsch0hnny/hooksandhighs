@@ -82,6 +82,7 @@ function loadEpisode(episode) {
   document.querySelectorAll('.playlist-item').forEach((item) => {
     item.classList.remove('border-barely-purple');
     if (episodeIndex === Number(item.getAttribute('aria-episode-index'))) {
+      item.classList.remove('border-barely-purple-dark/[0.3]');
       item.classList.add('border-barely-purple');
     }
   }); 
