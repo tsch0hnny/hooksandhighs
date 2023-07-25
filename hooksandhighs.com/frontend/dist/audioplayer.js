@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playAudio();
         });
     });
-    playlist.scrollTo(0, nestedElement.scrollHeight);
+    playlist.scrollTo(0, playlist.scrollHeight);
 });
 
 // Update song details
