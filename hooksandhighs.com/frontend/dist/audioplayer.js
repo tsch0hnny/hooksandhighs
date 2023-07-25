@@ -92,7 +92,7 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
     progressButton.style.left = `${progressPercent}%`;
     currTime.innerText = currentTime;
-    duration.innerText = duration;
+    durTime.innerText = duration;
     // Update duration time here...
 }
 
