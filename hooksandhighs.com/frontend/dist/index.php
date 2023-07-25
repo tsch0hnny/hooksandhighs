@@ -10,8 +10,8 @@
     <!--<body class="purple-gradient h-100 min-h-screen text-white background-fixed">-->
         <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark shadow-xl">
             <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center font-extralight">
-                <a href="#playlist" class="mr-6 relative">
-                    Playlist
+                <a href="#episodes" class="mr-6 relative">
+                    Episodes
                 </a>
                 <a href="#about" class="mr-6 max-md:ml-0 relative">
                     About
@@ -45,7 +45,7 @@
 
         <!-- START CONTENT  -->
         <div class="content-wrap ml-6 flex flex-col min-h-70vh items-start sm:items-center gap-72 custom-scrollbar overflow-y-scroll custom-full-height pr-4 mr-0 mt-0">
-            <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center" id="playlist">
+            <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center" id="episodes">
                 <div class="break-after-column md:flex-1" id="animated-logo-wrap">
                     <img src="img/hooksandhighs-logo.gif" id="animated-logo" class="w-full" alt="">
                 </div>
