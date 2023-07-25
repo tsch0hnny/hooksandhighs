@@ -30,8 +30,12 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
   .then(res => res.json())
   .then(data => {
     episodes = data; // save the data to use later
-    loadEpisode(episodes[episodeIndex]); // load the initial episode
+
+    // Set episodeIndex to the last episode
+    episodeIndex = episodes.length - 1;
     
+    loadEpisode(episodes[episodeIndex]); // load the last episode
+
     // Get all buttons with class "playlist-item"
     //const playlistItems = document.querySelectorAll('.playlist-item');
 
@@ -50,7 +54,7 @@ fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%
   .catch(err => console.error(err));
 
 // Keep track of song
-let episodeIndex = episodes.length - 1;
+let episodeIndex = 0;
 
 // Wait for the DOM content to load
 document.addEventListener('DOMContentLoaded', () => {
