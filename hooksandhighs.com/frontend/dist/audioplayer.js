@@ -16,6 +16,9 @@ const currTime = document.querySelector('.episode-current-time');
 const durTime = document.querySelector('.episode-duration');
 
 const playlist = document.querySelector('.playlist');
+const playBtnIcon = document.querySelector('.play-button-icon-play');
+const pauseBtnIcon = document.querySelector('.play-button-icon-pause');
+
 
 // Song titles
 const songs = [
@@ -101,6 +104,8 @@ function loadEpisode(episode) {
 function playAudio() {
   audioContainer.classList.add('play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-play');
+    playBtnIcon.classList.remove('hidden');
+    pauseBtnIcon.classList.add('hidden');
 //  playBtn.querySelector('i.fas').classList.add('fa-pause');
 
   audio.play();
@@ -109,6 +114,9 @@ function playAudio() {
 // Pause song
 function pauseAudio() {
   audioContainer.classList.remove('play');
+  playBtnIcon.classList.add('hidden');
+  pauseBtnIcon.classList.remove('hidden');
+
 //  playBtn.querySelector('i.fas').classList.add('fa-play');
 //  playBtn.querySelector('i.fas').classList.remove('fa-pause');
 
