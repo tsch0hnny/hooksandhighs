@@ -51,7 +51,7 @@
                 </div>
                 <div class="flex-1"> 
                     <h2 class="text-3xl font-extralight">
-                        Playlist
+                        Episodes
                     </h2>
                     <div class="mt-6 sm:mt-10 relative z-10 rounded-xl shadow-xl border border-barely-purple-dark" id="player">
                         <div
