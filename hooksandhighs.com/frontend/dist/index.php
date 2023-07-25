@@ -96,9 +96,13 @@
                             // Convert the response into an array
                             $data = json_decode($response, true);
 
+                            // Initialize the counter
+                            $episodeIndex = 0;
+
                             // Loop through the data to generate the HTML
                             foreach($data as $item){
                                 echo '<button
+                                    aria-episode-index="' . $episodeIndex . '"
                                     aria-current="true"
                                     aria-release-datetime="' . htmlspecialchars($item['releasedate']) . '"
                                     aria-id="' . htmlspecialchars($item['_id']) . '"
