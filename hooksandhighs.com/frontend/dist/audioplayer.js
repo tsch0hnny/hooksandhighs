@@ -91,7 +91,8 @@ function updateProgress(e) {
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
     progressButton.style.left = `${progressPercent}%`;
-
+    currTime.innerText = currentTime;
+    duration.innerText = duration;
     // Update duration time here...
 }
 
