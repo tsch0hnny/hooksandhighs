@@ -776,6 +776,10 @@ video {
   cursor: pointer;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .break-after-column {
   -moz-column-break-after: column;
        break-after: column;
