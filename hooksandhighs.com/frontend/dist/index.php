@@ -24,17 +24,17 @@
                 <img src="img/hooks-and-highs-logo-no-outline.png" id="logo" class="logo" alt="">
             </a>
             <nav class="links-external flex-1 flex flex-row sm:justify-end justify-center md:ml-auto">
-                <a href="#" class="mx-2">
+                <a href="https://www.instagram.com/hooksandhighs/" class="mx-2">
                     <svg viewBox="23 23 64 64" class="w-6 fill-barely-purple-light hover:fill-white">
                         <use xlink:href="#instagram-unauth-icon" width="110" height="110"></use>
                     </svg>
                 </a>
-                <a href="#" class="mx-2">
+                <a href="https://open.spotify.com/show/31sqG8zp1gGz4JlXx6ipXa" class="mx-2">
                     <svg viewBox="23 23 64 64" class="w-6 fill-barely-purple-light hover:fill-white">
                         <use xlink:href="#spotify-unauth-icon" width="110" height="110"></use>
                     </svg>
                 </a>
-                <a href="#" class="mx-2">
+                <a href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuaG9va3NhbmRoaWdocy5jb20vZXBpc29kZXM_Zm9ybWF0PXJzcw" class="mx-2">
                     <svg viewBox="23 23 64 64" class="w-6 fill-barely-purple-light hover:fill-white">
                         <use xlink:href="#applepodcast-icon" width="110" height="110"></use>
                     </svg>
