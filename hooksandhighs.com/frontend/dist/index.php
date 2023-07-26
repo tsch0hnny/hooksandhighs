@@ -188,7 +188,7 @@
             </div>
             <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center" id="about">
                 <div class="three-d-model">
-                    <model-viewer id="reveal" loading="eager" disable-zoom camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(5m - env(window-scroll-y) * 10m)" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
+                    <model-viewer id="reveal" loading="eager" camera-controls touch-action="pan-y" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(5m - env(window-scroll-y) * 10m)" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
                     </model-viewer>
                 </div>
                 <div class="border transition-shadow border-barely-purple-dark rounded-xl shadow-xl hover:shadow-md p-6">
