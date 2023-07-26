@@ -186,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex section-about flex-col sm:flex-row w-100 md:w-6/12 min-h-84vh justify-center" id="about">
+            <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center" id="about">
                 <div class="three-d-model">
                     <model-viewer id="reveal" loading="eager" camera-controls touch-action="pan-y" auto-rotate src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone"></model-viewer>
                 </div>
