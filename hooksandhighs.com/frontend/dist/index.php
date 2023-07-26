@@ -188,7 +188,7 @@
             </div>
             <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center" id="about">
                 <div class="three-d-model">
-                    <model-viewer id="reveal" loading="eager" camera-controls touch-action="pan-y" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(5m - env(window-scroll-y) * 10m)" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
+                    <model-viewer id="mic" loading="eager" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(5m - env(window-scroll-y) * 10m)" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
                     </model-viewer>
                 </div>
                 <div class="border transition-shadow border-barely-purple-dark rounded-xl shadow-xl hover:shadow-md p-6">
@@ -247,5 +247,32 @@
         </script>
         <script src='audioplayer.js'></script>
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+        <script>
+        const modelViewerParameters = document.querySelector("model-viewer#mic");
+
+        modelViewerParameters.addEventListener("load", (ev) => {
+
+          let material = modelViewerParameters.model.materials[0];
+
+          let metalnessDisplay = document.querySelector("#metalness-value");
+          let roughnessDisplay = document.querySelector("#roughness-value");
+
+          metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
+          roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+
+          // Defaults to gold
+          material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+
+          document.querySelector('#metalness').addEventListener('input', (event) => {
+            material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+            metalnessDisplay.textContent = event.target.value;
+          });
+
+          document.querySelector('#roughness').addEventListener('input', (event) => {
+            material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+            roughnessDisplay.textContent = event.target.value;
+          });
+        });
+        </script>
     </body>
 </html>
