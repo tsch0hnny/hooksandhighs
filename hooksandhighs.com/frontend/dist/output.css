@@ -917,6 +917,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-barely-purple {
   --tw-border-opacity: 1;
   border-color: rgb(86 67 86 / var(--tw-border-opacity));
