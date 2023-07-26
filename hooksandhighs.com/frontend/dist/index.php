@@ -212,7 +212,9 @@
                     </p>
                 </div>
             </div>
-
+        <footer class="border-t border-barely-purple text-l font-extralight mb-3 pt-3 w-full text-center">
+            Hooks & Highs &nbsp; | &nbsp; <a href="/impressum">Impressum</a>
+        </footer>
         </div>
         <!-- END CONTENT  -->
 
