@@ -19,3 +19,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+# rewrite /episodes?format=rss to /rss
+RewriteCond %{QUERY_STRING} ^format=rss$
+RewriteRule ^episodes$ /rss? [R=301,L]
+
+# rewrite /episodes to /
+RewriteRule ^episodes$ / [R=301,L]
+
