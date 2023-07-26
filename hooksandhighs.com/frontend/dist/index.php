@@ -258,7 +258,7 @@
           material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
 
 
-            //material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+            material.pbrMetallicRoughness.setMetallicFactor(1);
 
             material.pbrMetallicRoughness.setRoughnessFactor(1);
         });
