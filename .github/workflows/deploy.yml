@@ -18,5 +18,5 @@ jobs:
         key: ${{ secrets.REMOTE_SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-          cd /home/qevorybi/public_html/hooksandhighs.com/
+          cd /home/qevorybi/public_html/hooksandhighs.com/production/
           git pull
