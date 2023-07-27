@@ -29,11 +29,11 @@ const songs = [
     'Polo G – I Know'
 ];
 
-const url = 'https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
+const url = 'https://admin.hooksandhighs.com/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D'
 
 let episodes;
 
-fetch('https://admin.hooksandhighs.cyon.site/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D')
+fetch('https://admin.hooksandhighs.com/api/content/items/episodes?fields=%7Btitle:1,%20audio:1%7D')
   .then(res => res.json())
   .then(data => {
     episodes = data; // save the data to use later
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadEpisode(episode) {
   title.innerText = episode.title;
   episodeNumber.innerText = episodeIndex + 1;
-  audio.src = `https://admin.hooksandhighs.cyon.site/storage/uploads/${episode.audio.path}`;
+  audio.src = `https://admin.hooksandhighs.com/storage/uploads/${episode.audio.path}`;
   //cover.src = `images/${episode.title}.jpg`;
 
 

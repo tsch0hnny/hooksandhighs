@@ -77,7 +77,7 @@
                             define("API_KEY", "USR-f2d25347a1445d35430201fb41c1a5645deeabfe");
 
                             // Define the API URL
-                            $url = "https://admin.hooksandhighs.cyon.site/api/content/items/episodes";
+                            $url = "https://admin.hooksandhighs.com/api/content/items/episodes";
 
                             // Initialize the curl
                             $ch = curl_init();
