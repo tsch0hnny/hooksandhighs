@@ -10,9 +10,9 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-gradient-to-br from-black to-deeper-purple bg-no-repeat h-100 min-h-screen text-white bg-fixed">
+    <body class="bg-gradient-to-br from-black to-deeper-purple bg-no-repeat h-100 min-h-screen text-white bg-fixed custom-scrollbar">
     <!--<body class="purple-gradient h-100 min-h-screen text-white background-fixed">-->
-        <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center sticky top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark shadow-xl">
+        <div class="nav-wrap relative container min-w-full flex flex-wrap p-5 max-md:gap-5 flex-col md:flex-row max-md:content-center place-content-between items-center fixed top-0 z-20 backdrop-blur-md w-screen border-b border-barely-purple-dark shadow-xl">
             <nav class="links-internal flex-1 flex flex-wrap justify-start place-content-between text-base mr-auto max-md:justify-center font-extralight">
                 <a href="#episodes" class="mr-6 relative">
                     Episodes
@@ -48,7 +48,7 @@
         <!-- END navigation  -->
 
         <!-- START CONTENT  -->
-        <div class="content-wrap ml-6 flex flex-col min-h-70vh items-start sm:items-center gap-72 custom-scrollbar overflow-y-scroll custom-full-height pr-4 mr-0 mt-0">
+        <div class="content-wrap ml-6 flex flex-col min-h-70vh items-start sm:items-center gap-72 custom-scrollbar custom-full-height pr-4 mr-0 mt-0">
             <div class="section-recent w-full flex flex-col min-h-84vh md:flex-row md:items-center" id="episodes">
                 <div class="break-after-column md:flex-1" id="animated-logo-wrap">
                     <img src="img/hooksandhighs-logo.gif" id="animated-logo" class="w-full" alt="">
@@ -190,9 +190,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center" id="about">
-                <div class="three-d-model">
-                    <model-viewer id="mic" style="width: 42vw; height: 90vh;" loading="eager" camera-orbit="calc(30deg - env(window-scroll-y) * 60deg) 75deg 1.5m" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
+            <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center relative self-end" id="about">
+                <div class="three-d-model absolute left-[-95%]">
+                    <model-viewer id="mic" style="width: 42vw; height: 90vh;" loading="eager" camera-orbit="calc(30deg - env(window-scroll-y) * 60deg) 75deg 7m" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
                     </model-viewer>
                 </div>
                 <div class="border transition-shadow border-barely-purple-dark rounded-xl shadow-xl hover:shadow-md p-6">
