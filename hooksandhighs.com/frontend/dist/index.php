@@ -191,7 +191,7 @@
                 </div>
             </div>
             <div class="flex section-about flex-row sm:flex-col w-100 md:w-6/12 min-h-84vh justify-center items-center relative self-end" id="about">
-                <div class="three-d-model absolute left-[-95%]">
+                <div class="three-d-model absolute -left-full">
                     <model-viewer id="mic" style="width: 42vw; height: 90vh;" loading="eager" camera-orbit="calc(30deg - env(window-scroll-y) * 60deg) 75deg 7m" src="3d/microphone.glb" shadow-intensity="1" alt="A 3D model of a microphone">
                     </model-viewer>
                 </div>
