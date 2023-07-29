@@ -1216,7 +1216,7 @@ html::-webkit-scrollbar-track {
   width: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
+body .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
 
