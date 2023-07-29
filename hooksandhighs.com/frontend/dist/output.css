@@ -668,24 +668,16 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-px {
-  margin-top: 1px;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-7 {
   margin-top: 1.75rem;
 }
 
-.block {
-  display: block;
+.mt-px {
+  margin-top: 1px;
 }
 
-.inline-block {
-  display: inline-block;
+.block {
+  display: block;
 }
 
 .inline {
@@ -1012,14 +1004,14 @@ video {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-base {
@@ -1042,18 +1034,12 @@ video {
   line-height: 1.75rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-extralight {
   font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-medium {
@@ -1062,10 +1048,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-light {
-  font-weight: 300;
 }
 
 .tabular-nums {
