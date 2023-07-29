@@ -1146,6 +1146,10 @@ video {
   transition-duration: 500ms;
 }
 
+body {
+  scrollbar-color: linear-gradient(180deg, #221321, 0%, #2d102f, 100%);
+}
+
 html::-webkit-scrollbar-track {
   background: linear-gradient(180deg, #221321, 0%, #2d102f, 100%);
 }
