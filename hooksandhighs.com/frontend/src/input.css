@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: linear-gradient(180deg, #221321, 0%, #2d102f, 100%);
 }
 
