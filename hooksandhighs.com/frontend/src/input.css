@@ -75,6 +75,10 @@ html::-webkit-scrollbar-track {
   .custom-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
+    
+  html::-webkit-scrollbar-track, body.custom-scrollbar::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #221321, 0%, #2d102f, 100%);
+  }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color: #564356;
