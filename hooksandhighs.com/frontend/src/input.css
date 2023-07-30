@@ -77,7 +77,7 @@ html::-webkit-scrollbar-track {
   }
     
   html::-webkit-scrollbar-track, body.custom-scrollbar::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, #221321, 0%, #2d102f, 100%);
+    background: linear-gradient(#221321, #2d102f);
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
